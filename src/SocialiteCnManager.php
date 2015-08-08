@@ -9,7 +9,7 @@ use Dds\SocialiteCn\Two\QQProvider;
 use Dds\SocialiteCn\Two\WeiboProvider;
 use Dds\SocialiteCn\Two\WeixinProvider;
 
-class SocialiteManager extends Manager implements Contracts\Factory
+class SocialiteCnManager extends Manager implements Contracts\Factory
 {
 
     /**
