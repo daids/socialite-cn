@@ -1,4 +1,5 @@
-<?php namespace Dds\SocialiteCn;
+<?php 
+namespace Daids\SocialiteCn;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\SocialiteServiceProvider;

@@ -1,5 +1,5 @@
 <?php
-namespace Dds\SocialiteCn\Two;
+namespace Daids\SocialiteCn\Two;
 
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;

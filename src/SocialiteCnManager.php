@@ -1,4 +1,5 @@
-<?php namespace Dds\SocialiteCn;
+<?php 
+namespace Daids\SocialiteCn;
 
 use InvalidArgumentException;
 use Laravel\Socialite\SocialiteManager;
