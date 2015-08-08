@@ -1,5 +1,5 @@
 {
-    "name": "dds/socialite-cn",
+    "name": "daids/socialite-cn",
     "description": "socialite chinese with laravel5",
     "require": {
         "laravel/socialite": "~2.0"
