@@ -11,5 +11,10 @@
             "name": "daidongsheng",
             "email": "daids@mail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Daids\\SocialiteCn\\": "src/"
+        }
+    }
 }
