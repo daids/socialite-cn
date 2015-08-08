@@ -8,7 +8,7 @@ use Laravel\Socialite\Two\User;
 
 class QQProvider extends AbstractProvider implements ProviderInterface
 {
-
+    protected $openid;
 	 /**
      * {@inheritdoc}
      */
@@ -85,7 +85,8 @@ class QQProvider extends AbstractProvider implements ProviderInterface
             'query' => ['access_token' => $token],
         ]);
         $result = $this->parseJsonResult($response->getBody());
-        return $result['openid'];
+        $this->openId = $result['openid'];
+        return $this->openId;
     }
 
     /**
@@ -100,7 +101,7 @@ class QQProvider extends AbstractProvider implements ProviderInterface
 
     protected function parseJsonResult($body)
     {
-        return json_decode($this->removeCallback($body), true));
+        return json_decode($this->removeCallback($body), true);
     }
 
     protected function removeCallback($body)

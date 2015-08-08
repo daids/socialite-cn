@@ -1,15 +1,9 @@
 <?php 
 namespace Daids\SocialiteCn;
 
-use InvalidArgumentException;
 use Laravel\Socialite\SocialiteManager;
 
-use Dds\SocialiteCn\Two\BaiduProvider;
-use Dds\SocialiteCn\Two\QQProvider;
-use Dds\SocialiteCn\Two\WeiboProvider;
-use Dds\SocialiteCn\Two\WeixinProvider;
-
-class SocialiteManager extends Manager implements Contracts\Factory
+class SocialiteCnManager extends SocialiteManager
 {
 
     /**
@@ -22,7 +16,7 @@ class SocialiteManager extends Manager implements Contracts\Factory
         $config = $this->app['config']['services.baidu'];
 
         return $this->buildProvider(
-            'Dds\SocialiteCn\Two\BaiduProvider', $config
+            'Daids\SocialiteCn\Two\BaiduProvider', $config
         );
     }
 
@@ -36,7 +30,7 @@ class SocialiteManager extends Manager implements Contracts\Factory
         $config = $this->app['config']['services.qq'];
 
         return $this->buildProvider(
-            'Dds\SocialiteCn\Two\QQProvider', $config
+            'Daids\SocialiteCn\Two\QQProvider', $config
         );
     }
 
@@ -50,7 +44,7 @@ class SocialiteManager extends Manager implements Contracts\Factory
         $config = $this->app['config']['services.weibo'];
 
         return $this->buildProvider(
-            'Dds\SocialiteCn\Two\WeiboProvider', $config
+            'Daids\SocialiteCn\Two\WeiboProvider', $config
         );
     }
 
