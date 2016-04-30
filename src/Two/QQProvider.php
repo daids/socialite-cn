@@ -74,7 +74,7 @@ class QQProvider extends AbstractProvider implements ProviderInterface
         return (new User)->setRaw($user)->map([
             'id' => $this->openId,
             'nickname' => $user['nickname'],
-            'avatar' => $user['figureurl'],
+            'avatar' => $user['figureurl_2'],
         ]);
     }
 
