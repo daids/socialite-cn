@@ -31,7 +31,7 @@ class QQProvider extends AbstractProvider implements ProviderInterface
      * @param  string  $code
      * @return string
      */
-    public function getAccessToken($code)
+    public function getAccessTokenResponse($code)
     {
         $response = $this->getHttpClient()->get($this->getTokenUrl(), [
             'query' => $this->getTokenFields($code),
@@ -94,9 +94,9 @@ class QQProvider extends AbstractProvider implements ProviderInterface
      */
     protected function parseAccessToken($body)
     {
-        parse_str($this->removeCallback($body));
+        parse_str($this->removeCallback($body), $response);
 
-        return $access_token;
+        return $response;
     }
 
     protected function parseJsonResult($body)
